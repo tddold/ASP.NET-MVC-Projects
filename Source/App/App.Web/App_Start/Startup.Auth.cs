@@ -7,7 +7,8 @@
     using Microsoft.Owin.Security.Cookies;
     using Owin;
     using App.Web.App_Start;
-    using App.Web.ViewModels;
+    using Data;
+    using Data.Models;
 
     public partial class Startup
     {

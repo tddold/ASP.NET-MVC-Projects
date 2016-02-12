@@ -9,7 +9,7 @@
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
     using App_Start;
-    using ViewModels;
+    using Data.Models;
     [Authorize]
     public class AccountController : Controller
     {

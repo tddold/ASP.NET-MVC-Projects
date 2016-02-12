@@ -1,6 +1,7 @@
-﻿namespace App.Web.ViewModels
+﻿namespace App.Data
 {
     using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
 
     public class AppDbContext : IdentityDbContext<User>
     {
