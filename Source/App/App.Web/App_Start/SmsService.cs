@@ -1,4 +1,4 @@
-﻿namespace App.Web.App_Start
+﻿namespace App.Web
 {
     using System.Threading.Tasks;
     using Microsoft.AspNet.Identity;

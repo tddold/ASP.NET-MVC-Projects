@@ -8,7 +8,7 @@
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
     using App.Web.ViewModels.Manage;
-    using App_Start;
+
     [Authorize]
     public class ManageController : Controller
     {
