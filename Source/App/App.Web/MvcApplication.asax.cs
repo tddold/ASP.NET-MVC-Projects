@@ -13,10 +13,10 @@
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Configuration>());
 
-            using (var db = new AppDbContext())
-            {
-                db.Database.Initialize(true);
-            }
+            //using (var db = new AppDbContext())
+            //{
+            //    db.Database.Initialize(true);
+            //}
 
             AutofacConfig.RegisterAutofac();
 
