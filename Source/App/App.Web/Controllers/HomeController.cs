@@ -15,6 +15,7 @@
             {
                 db.Database.Initialize(true);
             }
+
             return this.View();
         }
 

@@ -11,7 +11,6 @@
     {
         protected void Application_Start()
         {
-
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Configuration>());
 
             AutofacConfig.RegisterAutofac();
