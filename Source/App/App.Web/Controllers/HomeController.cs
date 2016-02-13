@@ -1,11 +1,19 @@
 ﻿namespace App.Web.Controllers
 {
+    using Data;
     using System.Web.Mvc;
 
     public class HomeController : Controller
     {
+
+        public HomeController()
+        {
+        }
+
         public ActionResult Index()
         {
+            var db = new AppDbContext();
+            var usersCount = db.Users;
             return this.View();
         }
 

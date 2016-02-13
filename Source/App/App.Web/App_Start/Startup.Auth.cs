@@ -6,7 +6,6 @@
     using Microsoft.Owin;
     using Microsoft.Owin.Security.Cookies;
     using Owin;
-    using App.Web.App_Start;
     using Data;
     using Data.Models;
 

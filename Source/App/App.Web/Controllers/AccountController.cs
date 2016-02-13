@@ -8,8 +8,8 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
-    using App_Start;
     using Data.Models;
+
     [Authorize]
     public class AccountController : Controller
     {
