@@ -53,6 +53,10 @@
                .As<ICacheService>()
                .InstancePerRequest();
 
+            builder.Register(x => new IdentifierProvider())
+               .As<IIdentifierProvider>()
+               .InstancePerRequest();
+
             var servicesAssembly = Assembly.GetAssembly(typeof(IJokesService));
             builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
 
@@ -63,10 +67,6 @@
             builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
                 .AssignableTo<BaseController>()
                 .PropertiesAutowired();
-
-            // builder.Register(x => new IdentifierProvider())
-            //    .As<IIdentifierProvider>()
-            //    .InstancePerRequest();
         }
     }
 }

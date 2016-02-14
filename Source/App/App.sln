@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler", "Tools\Crawler\Cr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Services.Web", "Services\App.Services.Web\App.Services.Web.csproj", "{AB39CFF2-D38E-4232-B72E-D7FC7FDA721E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Services.Web.Tests", "Test\App.Services.Web.Tests\App.Services.Web.Tests.csproj", "{DD66636D-0629-4B99-8021-3532996B0A64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{AB39CFF2-D38E-4232-B72E-D7FC7FDA721E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB39CFF2-D38E-4232-B72E-D7FC7FDA721E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB39CFF2-D38E-4232-B72E-D7FC7FDA721E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD66636D-0629-4B99-8021-3532996B0A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD66636D-0629-4B99-8021-3532996B0A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD66636D-0629-4B99-8021-3532996B0A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD66636D-0629-4B99-8021-3532996B0A64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +86,6 @@ Global
 		{20CA63F5-8F67-4E60-BD99-CE55E699F61B} = {4A9029E2-DB26-4A21-8592-80CD5EDD4738}
 		{07858A64-D67C-4E75-AA2F-51D1476CA110} = {7A8B515B-DF4B-4AD4-859B-E62AC6BFE82F}
 		{AB39CFF2-D38E-4232-B72E-D7FC7FDA721E} = {4A9029E2-DB26-4A21-8592-80CD5EDD4738}
+		{DD66636D-0629-4B99-8021-3532996B0A64} = {BF6C92A2-48BB-44FA-9314-C6DC0EE2BC43}
 	EndGlobalSection
 EndGlobal

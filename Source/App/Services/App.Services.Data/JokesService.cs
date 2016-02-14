@@ -5,32 +5,29 @@
 
     using App.Data.Common;
     using App.Data.Models;
-    // using App.Services.Web;
+    using App.Services.Web;
 
     public class JokesService : IJokesService
     {
         private readonly IDbRepository<Joke> jokes;
-        // private readonly IIdentifierProvider identifierProvider;
+        private readonly IIdentifierProvider identifierProvider;
 
-
-        // IIdentifierProvider identifierProvider
-        public JokesService(IDbRepository<Joke> jokes)
+        public JokesService(
+            IDbRepository<Joke> jokes,
+            IIdentifierProvider identifierProvider)
         {
             this.jokes = jokes;
-           //  this.identifierProvider = identifierProvider;
+            this.identifierProvider = identifierProvider;
         }
+
+
 
         public Joke GetById(string id)
         {
-            throw new NotImplementedException();
+            var intId = this.identifierProvider.DecodeId(id);
+            var joke = this.jokes.GetById(intId);
+            return joke;
         }
-
-        //public Joke GetById(string id)
-        //{
-        //    var intId = this.identifierProvider.DecodeId(id);
-        //    var joke = this.jokes.GetById(intId);
-        //    return joke;
-        //}
 
         public IQueryable<Joke> GetRandomJokes(int count)
         {

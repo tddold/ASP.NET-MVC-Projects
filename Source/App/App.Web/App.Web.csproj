@@ -202,6 +202,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JokesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="App_Start\GlimpseSecurityPolicy.cs" />
     <Compile Include="MvcApplication.asax.cs" />
@@ -283,6 +284,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="stylecop.json" />
     <Content Include="stylecop1.json" />
+    <Content Include="Views\Jokes\ByID.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
