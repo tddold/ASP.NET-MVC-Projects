@@ -1,29 +1,23 @@
 ﻿namespace App.Web.Controllers
 {
-    using System;
     using System.Linq;
     using System.Web.Mvc;
-
-    using Data.Common;
-    using Data.Models;
     using Web.Infrastructure.Mapping;
     using ViewModels.Home;
     using Services.Data;
     using Services.Web;
-    public class HomeController : Controller
+
+    public class HomeController : BaseController
     {
         private IJokesService jokes;
         private ICategoriesService jokesCategory;
-        private ICacheService cacheService;
 
         public HomeController(
             IJokesService jokes,
-           ICategoriesService jokesCategory,
-           ICacheService cacheService)
+           ICategoriesService jokesCategory)
         {
             this.jokes = jokes;
             this.jokesCategory = jokesCategory;
-            this.cacheService = cacheService;
         }
 
         // Poor man's DI
@@ -50,7 +44,7 @@
                 .To<JokeViewModel>()
                 .ToList();
             var categories =
-                this.cacheService.Get(
+                this.Cache.Get(
                     "categories", () => this.jokesCategory.GetAll().To<JokeCategoryViewModel>().ToList(),
                     30 * 60);
             var viewModel = new IndexViewModel

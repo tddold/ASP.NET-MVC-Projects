@@ -7,10 +7,12 @@
 
     using Autofac;
     using Autofac.Integration.Mvc;
+    using Controllers;
     using Data;
     using Data.Common;
     using Services.Data;
     using Services.Web;
+
     public static class AutofacConfig
     {
         public static void RegisterAutofac()
@@ -58,17 +60,13 @@
                .As(typeof(IDbRepository<>))
                .InstancePerRequest();
 
-            
+            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
+                .AssignableTo<BaseController>()
+                .PropertiesAutowired();
+
             // builder.Register(x => new IdentifierProvider())
             //    .As<IIdentifierProvider>()
             //    .InstancePerRequest();
-
-            
-
-
-
-            // builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
-            //    .AssignableTo<BaseController>().PropertiesAutowired();
         }
     }
 }
