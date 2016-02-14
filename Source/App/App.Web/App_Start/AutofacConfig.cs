@@ -10,7 +10,7 @@
     using Data;
     using Data.Common;
     using Services.Data;
-
+    using Services.Web;
     public static class AutofacConfig
     {
         public static void RegisterAutofac()
@@ -47,6 +47,10 @@
                .As<DbContext>()
                .InstancePerRequest();
 
+            builder.Register(x => new HttpCacheService())
+               .As<ICacheService>()
+               .InstancePerRequest();
+
             var servicesAssembly = Assembly.GetAssembly(typeof(IJokesService));
             builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
 
@@ -54,9 +58,7 @@
                .As(typeof(IDbRepository<>))
                .InstancePerRequest();
 
-            // builder.Register(x => new HttpCacheService())
-            //    .As<ICacheService>()
-            //    .InstancePerRequest();
+            
             // builder.Register(x => new IdentifierProvider())
             //    .As<IIdentifierProvider>()
             //    .InstancePerRequest();

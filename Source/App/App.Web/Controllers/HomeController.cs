@@ -9,17 +9,21 @@
     using Web.Infrastructure.Mapping;
     using ViewModels.Home;
     using Services.Data;
+    using Services.Web;
     public class HomeController : Controller
     {
         private IJokesService jokes;
         private ICategoriesService jokesCategory;
+        private ICacheService cacheService;
 
         public HomeController(
             IJokesService jokes,
-           ICategoriesService jokesCategory)
+           ICategoriesService jokesCategory,
+           ICacheService cacheService)
         {
             this.jokes = jokes;
             this.jokesCategory = jokesCategory;
+            this.cacheService = cacheService;
         }
 
         // Poor man's DI
@@ -45,10 +49,10 @@
                 .GetRandomJokes(3)
                 .To<JokeViewModel>()
                 .ToList();
-            var categories = this.jokesCategory
-                .GetAll()
-                .To<JokeCategoryViewModel>()
-                .ToList();
+            var categories =
+                this.cacheService.Get(
+                    "categories", () => this.jokesCategory.GetAll().To<JokeCategoryViewModel>().ToList(),
+                    30 * 60);
             var viewModel = new IndexViewModel
             {
                 Jokes = jokes,
