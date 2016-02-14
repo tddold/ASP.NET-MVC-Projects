@@ -54,6 +54,10 @@
       <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Glimpse.Ado, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Glimpse.Ado.1.7.3\lib\net45\Glimpse.Ado.dll</HintPath>
       <Private>True</Private>
@@ -209,6 +213,9 @@
     <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\Home\IndexViewModel.cs" />
+    <Compile Include="ViewModels\Home\JokeCategoryViewModel.cs" />
+    <Compile Include="ViewModels\Home\JokeViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Manage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\ConfigureTwoFactorViewModel.cs" />
@@ -293,6 +300,10 @@
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\App.Web.Infrastructure\App.Web.Infrastructure.csproj">
+      <Project>{70ec9ad3-31dd-4aae-a384-32dc1e6359ba}</Project>
+      <Name>App.Web.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data\App.Data.Common\App.Data.Common.csproj">
       <Project>{4603eca7-7dc2-480b-9281-ff3f93dc42b0}</Project>
       <Name>App.Data.Common</Name>
@@ -304,6 +315,10 @@
     <ProjectReference Include="..\Data\App.Data\App.Data.csproj">
       <Project>{b3f32de1-71cb-42a5-a719-94690295d335}</Project>
       <Name>App.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\App.Services.Data\App.Services.Data.csproj">
+      <Project>{20ca63f5-8f67-4e60-bd99-ce55e699f61b}</Project>
+      <Name>App.Services.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
