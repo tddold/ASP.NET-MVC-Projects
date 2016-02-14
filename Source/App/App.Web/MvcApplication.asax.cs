@@ -4,6 +4,8 @@
     using System.Web.Mvc;
     using System.Web.Optimization;
     using System.Web.Routing;
+    using Data;
+    using Data.Migrations;
 
     using Data;
     using Data.Migrations;
@@ -15,11 +17,14 @@
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Configuration>());
 
+<<<<<<< HEAD
             //using (var db = new AppDbContext())
             //{
             //    db.Database.Initialize(true);
             //}
 
+=======
+>>>>>>> 6ca5c2744ff07e9ad93c0f5627d37f5deea149bf
             AutofacConfig.RegisterAutofac();
 
             AreaRegistration.RegisterAllAreas();

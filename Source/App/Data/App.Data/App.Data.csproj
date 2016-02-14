@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+<<<<<<< HEAD
     <Compile Include="Migrations\201602130137339_InitialCreate.cs" />
     <Compile Include="Migrations\201602130137339_InitialCreate.Designer.cs">
       <DependentUpon>201602130137339_InitialCreate.cs</DependentUpon>
@@ -65,6 +66,19 @@
     <Compile Include="Migrations\201602132152088_JokeAndJokeCategories.cs" />
     <Compile Include="Migrations\201602132152088_JokeAndJokeCategories.Designer.cs">
       <DependentUpon>201602132152088_JokeAndJokeCategories.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201602130139588_InitialCreate.cs" />
+    <Compile Include="Migrations\201602130139588_InitialCreate.Designer.cs">
+      <DependentUpon>201602130139588_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602132350583_AddModels.cs" />
+    <Compile Include="Migrations\201602132350583_AddModels.Designer.cs">
+      <DependentUpon>201602132350583_AddModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602140010116_ModifyModels.cs" />
+    <Compile Include="Migrations\201602140010116_ModifyModels.Designer.cs">
+      <DependentUpon>201602140010116_ModifyModels.cs</DependentUpon>
+>>>>>>> 6ca5c2744ff07e9ad93c0f5627d37f5deea149bf
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,11 +98,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201602130137339_InitialCreate.resx">
       <DependentUpon>201602130137339_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602132152088_JokeAndJokeCategories.resx">
       <DependentUpon>201602132152088_JokeAndJokeCategories.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201602130139588_InitialCreate.resx">
+      <DependentUpon>201602130139588_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602132350583_AddModels.resx">
+      <DependentUpon>201602132350583_AddModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602140010116_ModifyModels.resx">
+      <DependentUpon>201602140010116_ModifyModels.cs</DependentUpon>
+>>>>>>> 6ca5c2744ff07e9ad93c0f5627d37f5deea149bf
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

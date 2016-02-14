@@ -8,6 +8,10 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
+<<<<<<< HEAD
+=======
+    using App.Web.ViewModels.Manage;
+>>>>>>> 6ca5c2744ff07e9ad93c0f5627d37f5deea149bf
 
     [Authorize]
     public class ManageController : BaseController

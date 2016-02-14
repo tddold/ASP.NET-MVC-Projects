@@ -1,14 +1,24 @@
 ﻿namespace App.Web.Controllers
 {
+<<<<<<< HEAD
     using System.Linq;
     using System.Web.Mvc;
     using Web.Infrastructure.Mapping;
     using ViewModels.Home;
     using Services.Data;
     using Services.Web;
+=======
+    using System;
+    using System.Linq;
+    using System.Web.Mvc;
+    using Data;
+    using Data.Common;
+    using Data.Models;
+>>>>>>> 6ca5c2744ff07e9ad93c0f5627d37f5deea149bf
 
     public class HomeController : BaseController
     {
+<<<<<<< HEAD
         private IJokesService jokes;
         private ICategoriesService jokesCategory;
 
@@ -54,6 +64,26 @@
             };
 
             return this.View(viewModel);
+=======
+        private IDbRepository<Product> products;
+        private IDbRepository<Category> categories;
+
+        public HomeController(
+            IDbRepository<Product> products,
+            IDbRepository<Category> categories)
+        {
+            this.products = products;
+            this.categories = categories;
+        }
+
+        public ActionResult Index()
+        {
+            var products = this.products.All()
+                 .OrderBy(x => Guid.NewGuid())
+                 .Take(3);
+
+            return this.View();
+>>>>>>> 6ca5c2744ff07e9ad93c0f5627d37f5deea149bf
         }
 
         public ActionResult About()
