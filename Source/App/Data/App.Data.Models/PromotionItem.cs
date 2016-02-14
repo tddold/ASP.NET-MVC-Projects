@@ -1,9 +1,9 @@
 ﻿namespace App.Data.Models
 {
-    public class PromotionItem
-    {
-        public int Id { get; set; }
+    using App.Data.Common.Models;
 
+    public class PromotionItem: BaseModel<int>
+    {
         public int PromotionId { get; set; }
 
         public virtual Promotion Propmotion { get; set; }

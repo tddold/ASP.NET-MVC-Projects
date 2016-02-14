@@ -1,11 +1,10 @@
 ﻿namespace App.Data.Models
 {
     using System;
+    using App.Data.Common.Models;
 
-    public class Promotion
+    public class Promotion : BaseModel<int>
     {
-        public int Id { get; set; }
-
         public string Name { get; set; }
 
         public DateTime? StartDate { get; set; }

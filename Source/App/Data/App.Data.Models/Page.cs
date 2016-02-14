@@ -1,9 +1,9 @@
 ﻿namespace App.Data.Models
 {
-    public class Page
-    {
-        public int Id { get; set; }
+    using App.Data.Common.Models;
 
+    public class Page: BaseModel<int>
+    {
         public string Link { get; set; }
 
         public bool ShowOnNav { get; set; }

@@ -1,11 +1,9 @@
 ﻿namespace App.Data.Models
 {
-    using System;
+    using Common.Models;
 
-    public class OrderItem
+    public class OrderItem: BaseModel<int>
     {
-        public int Id { get; set; }
-
         public int OrderId { get; set; }
 
         public virtual Order Order { get; set; }

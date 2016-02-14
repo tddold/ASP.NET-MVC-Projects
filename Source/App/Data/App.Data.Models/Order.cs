@@ -1,13 +1,10 @@
 ﻿namespace App.Data.Models
 {
+    using Common.Models;
     using System;
 
-    public class Order
+    public class Order: BaseModel<int>
     {
-        public int Id { get; set; }
-
-        public DateTime MyProperty { get; set; }
-
         public bool Status { get; set; }
 
         public decimal Total { get; set; }

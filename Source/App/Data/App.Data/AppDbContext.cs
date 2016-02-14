@@ -19,6 +19,22 @@
             return new AppDbContext();
         }
 
+        public IDbSet<Product> Products { get; set; }
+
+        public IDbSet<Category> Categories { get; set; }
+
+        public IDbSet<Image> Images { get; set; }
+
+        public IDbSet<Order> Orders { get; set; }
+
+        public IDbSet<OrderItem> OrderItems { get; set; }
+
+        public IDbSet<Page> Pages { get; set; }
+
+        public IDbSet<Promotion> Promotions { get; set; }
+
+        public IDbSet<PromotionItem> PromotionItems { get; set; }
+
         public override int SaveChanges()
         {
             this.ApplyAuditInfoRules();

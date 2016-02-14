@@ -1,12 +1,10 @@
 ﻿namespace App.Data.Models
 {
     using System.ComponentModel.DataAnnotations;
+    using Common.Models;
 
-    public class Image
+    public class Image: BaseModel<int>
     {
-        [Key]
-        public int Id { get; set; }
-
         public string ImagePath { get; set; }
 
         public string Link { get; set; }

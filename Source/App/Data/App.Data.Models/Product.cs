@@ -1,16 +1,9 @@
 ﻿namespace App.Data.Models
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    public class Product
+    using Common.Models;
+    public class Product: BaseModel<int>
     {
-        [Key]
-        public int Id { get; set; }
-
         public string Name { get; set; }
 
         [MaxLength(100)]

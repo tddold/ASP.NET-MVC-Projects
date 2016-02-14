@@ -1,20 +1,30 @@
 ﻿namespace App.Web.Controllers
 {
-    using Data;
+    using System;
+    using System.Linq;
     using System.Web.Mvc;
+    using Data;
+    using Data.Common;
+    using Data.Models;
 
     public class HomeController : Controller
     {
-        public HomeController()
+        private IDbRepository<Product> products;
+        private IDbRepository<Category> categories;
+
+        public HomeController(
+            IDbRepository<Product> products,
+            IDbRepository<Category> categories)
         {
+            this.products = products;
+            this.categories = categories;
         }
 
         public ActionResult Index()
         {
-            using (var db = new AppDbContext())
-            {
-                db.Database.Initialize(true);
-            }
+            var products = this.products.All()
+                 .OrderBy(x => Guid.NewGuid())
+                 .Take(3);
 
             return this.View();
         }

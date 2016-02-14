@@ -1,8 +1,9 @@
 ﻿namespace App.Data.Models
 {
     using System.Collections.Generic;
+    using Common.Models;
 
-    public class Category
+    public class Category: BaseModel<int>
     {
         private ICollection<Category> categories;
         private ICollection<Product> products;
@@ -12,8 +13,6 @@
             this.categories = new HashSet<Category>();
             this.products = new HashSet<Product>();
         }
-
-        public int Id { get; set; }
 
         public string Name { get; set; }
 
